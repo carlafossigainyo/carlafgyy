@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carla FOSSI GAIN-YO's profile</title>
+    <meta name="description" content="This is the profile of Carla">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #fff0f6 0%, #ffe4ec 40%, #ffd6e8 100%);
+        color: #4b2e39;
+        line-height: 1.7;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Decorative background blobs */
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        border-radius: 50%;
+        z-index: -1;
+        filter: blur(80px);
+        opacity: 0.5;
+      }
+
+      body::before {
+        width: 300px;
+        height: 300px;
+        background: #ff9ecb;
+        top: -80px;
+        left: -80px;
+      }
+
+      body::after {
+        width: 350px;
+        height: 350px;
+        background: #ffc2dd;
+        bottom: -100px;
+        right: -100px;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 980px;
+        margin: 50px auto;
+      }
+
+      .card-white {
+        background: rgba(255, 255, 255, 0.78);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 40px 35px;
+        margin: 25px 0;
+        border-radius: 28px;
+        box-shadow: 0 12px 35px rgba(255, 105, 180, 0.12);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card-white:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 45px rgba(255, 105, 180, 0.18);
+      }
+
+      #introduction {
+        text-align: center;
+        padding-top: 55px;
+        padding-bottom: 55px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,240,246,0.9));
+      }
+
+      h1, h2 {
+        font-family: 'Lora', serif;
+      }
+
+      h1 {
+        font-size: 48px;
+        color: #d63384;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+      }
+
+      h2 {
+        font-size: 30px;
+        color: #c2185b;
+        margin-bottom: 18px;
+        position: relative;
+        display: inline-block;
+      }
+
+      h2::after {
+        content: "";
+        display: block;
+        width: 60%;
+        height: 4px;
+        background: linear-gradient(to right, #ff8ab8, #ffd1e3);
+        border-radius: 10px;
+        margin-top: 8px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #5e3b4b;
+        margin-top: 10px;
+      }
+
+      strong {
+        color: #d63384;
+      }
+
+      .img-circle {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        box-shadow: 0 10px 30px rgba(214, 51, 132, 0.25);
+        margin: 20px 0;
+      }
+
+      .travel-img {
+        width: 100%;
+        max-width: 420px;
+        display: block;
+        margin: 25px auto 0;
+        border-radius: 22px;
+        object-fit: cover;
+        box-shadow: 0 12px 30px rgba(214, 51, 132, 0.18);
+        transition: transform 0.3s ease;
+      }
+
+      .travel-img:hover {
+        transform: scale(1.03);
+      }
+
+      .btn-blue {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 14px 28px;
+        background: linear-gradient(135deg, #ff5fa2, #ff8fc5);
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 50px;
+        box-shadow: 0 10px 25px rgba(255, 95, 162, 0.28);
+        transition: all 0.3s ease;
+      }
+
+      .btn-blue:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 14px 28px rgba(255, 95, 162, 0.38);
+      }
+
+      .list-inline {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .list-inline li {
+        display: inline;
+      }
+
+      .list-inline a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ff8ab8, #d63384);
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+        box-shadow: 0 10px 25px rgba(214, 51, 132, 0.25);
+        transition: all 0.3s ease;
+      }
+
+      .list-inline a:hover {
+        transform: scale(1.12) rotate(5deg);
+      }
+
+      /* Little sparkle decorations */
+      .sparkle {
+        position: absolute;
+        font-size: 22px;
+        opacity: 0.5;
+      }
+
+      .sparkle.one {
+        top: 40px;
+        right: 80px;
+      }
+
+      .sparkle.two {
+        top: 140px;
+        left: 80px;
+      }
+
+      .sparkle.three {
+        bottom: 90px;
+        right: 120px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          width: 92%;
+          margin: 25px auto;
+        }
+
+        .card-white {
+          padding: 28px 22px;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        h2 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        .img-circle {
+          width: 140px;
+          height: 140px;
+        }
+
+        .sparkle {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="sparkle one">✨</div>
+    <div class="sparkle two">💖</div>
+    <div class="sparkle three">🌸</div>
+
+    <div class="container">
+
+      <div class="card-white" id="introduction">
+        <h1>Hello, I'm Carla 💕</h1>
+        <img src="images/carla.JPEG" class="img-circle" alt="Carla FOSSI GAIN-YO"> 
+        <p>
+          I love spending time with my family and my friends and discovering new things. 
+          I started learning with <strong>Le Wagon</strong> this year at <strong>IESEG School of Management</strong>.
+        </p>
+        <a href="http://lewagon.com" class="btn-blue" target="_blank">Discover Le Wagon</a>
+      </div>
+
+      <div class="card-white">
+        <h2>My hobbies</h2>
+        <p>
+          I like to discover the world and new cultures. I am passionate about 
+          <strong>travelling and music</strong>.
+        </p>
+        <img src="images/turquie.JPEG" class="travel-img" alt="Travel picture">
+      </div>
+
+      <div class="card-white">
+        <h2>My home city</h2>
+        <p>
+          I am from <strong>Paris</strong>. It is a very <strong>sunny and joyful city</strong>.
+        </p>
+      </div>
+
+      <div class="card-white">
+        <h2>My studies</h2>
+        <p>
+          I moved to Paris to join <strong>IESEG School of Management</strong> this year.
+        </p>
+      </div>
+
+      <div class="card-white" style="text-align: center;">
+        <h2>Follow me</h2>
+        <ul class="list-inline">
+          <li>
+            <a href="https://www.instagram.com/carlaafgy/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </body>
+</html>
